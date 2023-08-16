@@ -8,20 +8,64 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/e59ea1f6c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/phone.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 769px) and (max-width: 1024px)">
 </head>
 
 <body>
-    <div class="main-container">
-        <header></header>
-        <main>
-            <div class="hebergements-and-populaires">
-                <section class="hebergements">
 
-                </section>
+            <!--HEADER-->
+            <header>
+                <img class="header__logo" src="./images/logo/Booki.png" alt="Logo Booki">
+                <nav class="header__nav">
+                    <ul>
+                        <li class="nav__top"><a class="header__lien taille2" href="#hebergements">Hébergements</a></li>
+                        <li class="nav__top"><a class="header__lien taille2" href="#activites">Activités</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        <!--MAIN-->
+    <main>
+        <!--TOP (Titres + Search Bar + Filtres + Info Bar)-->
+        <section class="top">
+
+            <!--Titres-->
+            <div class="main__titres">
+                <h1 class="bold taille1">Trouvez votre hébergement pour des vacances de rêve</h1>
+                <p class="taille2">En plein centre ville ou en pleine nature</p>
+            </div>
+
+            <!--Search Bar-->
+            <form method="get">
+                <span class="searchBar__icone"><i class="fa-solid fa-location-dot taille2"></i></span>
+                <input class="searchBar__input bold taille2" type="text" placeholder="Marseille, France">
+                <button class="searchBar__button bold taille2" type="submit"> 
+                    <span class="button__rechercher">Rechercher</span> 
+                    <i class="button__loupe fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <!--Filtres-->
+            <div class="main__filtres">
+                <h2 class="filtre__titre bold taille2">Filtres</h2>
+                <div class="filtre__buttons">
+                    <button class="button__filtre taille2 bold"> <i class="fa-solid fa-money-bill-wave filtreIcone"></i> Economique</button>                  
+                    <button class="button__filtre taille2 bold"> <i class="fa-solid fa-person filtreIcone"></i> Familial</button> 
+                    <button class="button__filtre taille2 bold"> <i class="fa-solid fa-heart filtreIcone"></i> Romantique</button>                  
+                    <button class="button__filtre taille2 bold"> <i class="fa-solid fa-dog filtreIcone"></i> Animaux autorisés</button> 
+                </div>
+            </div>
+
+            <!--InfoBar-->
+            <div class="infoBar">
+                <span><i class="infoBarIcone fa-solid fa-info"></i></span>
+                <p class="infoBarTexte taille2">Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </section>
+
                 <section class="populaires">
                     <div class="populaires-title">
                         <h2 class="section-title">Les plus populaires</h2>
@@ -83,8 +127,34 @@
                 </section>
             </div>
         </main>
-        <footer></footer>
-    </div>
-</body>
 
+        
+        <!--FOOTER-->
+    <footer class="column">
+        <div class="footerInfo">
+            <h4 class="taille2 bold">À propos</h4>
+            <ul class="liste">
+                <li class="puce"><a class="taille3" href="#">Fonctionnement du site</a></li>
+                <li class="puce"><a class="taille3" href="#">Conditions générales</a></li>
+                <li class="puce"><a class="taille3" href="#">Données et confidentialité</a></li>
+            </ul>
+        </div>
+
+        <div class="footerInfo">
+            <h4 class="taille2 bold">Nos hébergements</h4>
+            <ul class="liste">
+                <li class="puce"><a class="taille3" href="#">Charte qualité</a></li>
+                <li class="puce"><a class="taille3" href="#">Proposer votre hôtel</a></li>
+            </ul>
+        </div>
+
+        <div class="footerInfo">
+            <h4 class="taille2 bold">Assistance</h4>
+            <ul class="liste">
+                <li class="puce"><a class="taille3" href="#">Centre d'aide</a></li>
+                <li class="puce"><a class="taille3" href="#">Nous contacter</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
 </html>

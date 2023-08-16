@@ -1,0 +1,9 @@
+
+/*-------FILTRES-------*/
+.filtre__buttons {
+    justify-content: space-evenly;
+}
+
+.button__filtre {
+    margin: 0;
+}
