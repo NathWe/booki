@@ -1,3 +1,8 @@
+:root {
+    --color-primary: #0065fc;
+    --color-secondary: #D9D9D9;
+}
+
 /*GENERAL*/
 body {
     margin: 0;
@@ -5,11 +10,16 @@ body {
     padding: 0 50px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 /*FONTS*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 * {
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-family: 'Raleway';
+    font-size: 15px;
 }
 
 /*Epaisseur*/
@@ -21,23 +31,14 @@ body {
     font-weight: 700;
 }
 
-/*Taille*/
-.taille1 {
-    font-size: 22px;
-}
-
-.taille2 {
-    font-size: 16px;
-}
-
-.taille3 {
-    font-size: 14px;
-}
-
 /*LIENS*/
 a {
     text-decoration: none;
     color: #000000;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /*IMAGES*/
@@ -66,31 +67,31 @@ nav ul {
     display: flex;
     padding: 0;
     margin: 0;
-    justify-content: space-between;
-    width: 300px;
 }
+
+.nav__top {
+    padding-left: 65px;
+}
+
 /*Liens*/
 .header__lien {
+    padding: 15px 0;
     text-decoration: none;
     color: #000000;
     display: flex;
-    height: 60px;
-    width: 130px;
     align-items: flex-end;
     justify-content: center;
+    font-size: 16px;
 }
 
 .header__lien:hover {
     color:#0065FC;
     border-top: 2px solid #0065FC;
-    height: 58px;
+    padding-top: 13px;
+    text-decoration: none;
 }
-/*----------
-    MAIN
------------*/
-
-/*--------TOP--------*/
-
+/**MAIN**/
+/*TOP*/
 /*Titres*/
 .main__titres {
     margin: 55px 0 30px 0px;
@@ -98,6 +99,11 @@ nav ul {
 
 .main__titres h1 {
     margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 22px;
+}  
+.main__titres p {
+    font-size: 16px;
 }
 
 /*Formulaire de recherche*/
@@ -110,6 +116,7 @@ form {
     background: #F2F2F2;
     border: 1px solid #F2F2F2;
     border-radius: 15px 0px 0px 15px;
+    font-size: 16px;
 }
 
     /*Input*/
@@ -123,6 +130,8 @@ form {
     border-left: none;
     border-right: none;
     padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
     /*Button*/
@@ -133,6 +142,8 @@ form {
     border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
     padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
         /*Loupe*/
@@ -151,14 +162,17 @@ form {
     /*Titre*/
 .filtre__titre {
     padding-right: 15px;
+    font-weight: bold;
+    font-size: 16px;
+
 }
 
     /*Boutons*/
         /*Général*/
 .filtre__buttons {
-    width: 100%;
     display: flex;
     justify-content: flex-start;
+    flex-grow: 1;
 }
 
         /*Boutons séparés*/
@@ -168,8 +182,8 @@ form {
     border: 2px solid #D9D9D9;
     border-radius: 25px;
     background: #FFFFFF;
-    align-items: center;
-    display: flex;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .button__filtre:hover {
@@ -179,7 +193,8 @@ form {
         /*Icones*/
 .filtreIcone {
     color: #0065FC;
-    padding-right: 12px;
+    font-size: 22px;
+    height: 10px;
 }
 
 /*Barre d'information*/
@@ -189,7 +204,6 @@ form {
     margin-bottom: 20px;
 }
 
-    /*Icones*/
 .infoBarIcone {
     display: flex !important;
     align-items: center;
@@ -198,66 +212,239 @@ form {
     width: 10px;
     height: 10px;
     padding: 5px;
-    font-size: 11px;
+    font-size: 16px;
 
     border: 1px solid #D9D9D9;
     border-radius: 15px;
     color: #0065FC;
+
+    margin-right: 10px;
 }
 
-    /*Texte*/
 .infoBarTexte {
-    margin-left: 15px;
+    font-size: 16px;
+    margin-left: 0;
 }
+
+/* NOTATION */
+.review > * {
+    color: var(--color-secondary);
+    font-size: 14px;
+}
+
+.review > .filled {
+    color: var(--color-primary);
+}
+/* END NOTATION */
+
+/* Container hebergements et populaire*/
+.hebergementsPopulaires {
+    display: flex;
+    justify-content: space-between;
+}
+
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
-}
-
-/****** Populaires ***********/
-.populaires {
-    width: 32%;
-}
-
-.populaires-title {
+    width: 64%;
+    background-color: #F2F2F2;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    border-radius: 10px;
+    padding: 30px;
 }
 
-.populaires-cards .card {
+.hebergements .cards-container {
+    margin-bottom: 30px;
+}
+
+/*Titre*/
+.hebergements__titre {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 22px;
+    font-weight: 700;
+}
+/* Conteneur pour les cartes */
+.cards-container {
     display: flex;
-    margin-top: 33px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
 }
 
-.populaires-cards img {
-    width: 33%;
-    height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.populaires-cards .card-content {
-    width: 67%;
-    padding-left: 15px;
-    display: flex;
+/* Cartes */
+.card {
+    flex-basis: calc(33.33% - 2.67%);
+    background-color: #FFFFFF;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    border: 5px solid #FFFFFF;
+    border-radius: 20px;
     flex-direction: column;
-    justify-content: space-between;
+    padding: 0 0 15px 0;
     box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
+a.card:hover {
+    text-decoration: none;
 }
 
-.populaires-cards .card-subtitle {
-    margin: 0;
+a.card:hover .card__title {
+    text-decoration: underline;
 }
 
-.populaires-cards .card-rating {
+/* Ajout de styles pour l'image */
+.card__header {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 0;
+    margin: -5px;
+}
+
+.card__header img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0; 
+    border: 5px solid #FFFFFF;
+}
+
+/* Titre de la carte */
+.card__title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.review {
+    margin-top: auto; 
+    display: flex;
+    justify-content: flex-start; 
+}
+
+/* Description */
+.card__body {
+    font-weight: normal;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.afficherPlus {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/****** Populaires ***********/
+.populaires {
+    width: 33%;
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding: 30px;
+    margin-left: 30px;
+}
+.populaires .cards-container-pop {
+    margin-bottom: 30px;
+}
+
+/*Titre et icônes*/
+.populaires__titre {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.populaires__titre i {
+    float: right; 
+    color: #0065FC;
+    font-size: 22px;
+    margin-right: 20px;
+}
+/* Cartes */
+.card-pop {
+    background-color: #FFFFFF;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    border: 5px solid #FFFFFF;
+    border-radius: 20px;
+    margin: 10px;
+    width: calc(100% - 20px);
+    display: flex;
+    box-sizing: border-box; 
+}
+
+/* Ajout de styles pour l'image */
+.card__header-pop {
+    width: 123px; 
+    height: 144px; 
+    overflow: hidden;
+}
+
+.card__header-pop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px; 
+}
+
+/* Contenu de la carte (titre et description) */
+.card__body-pop {
+    padding: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    flex: 1;
+}
+
+/* Titre */
+.card__title-pop {
+    font-weight: bold;
+    font-size: 18px;
     margin-bottom: 5px;
 }
+
+/* Description */
+.card__description-pop {
+    font-size: 14px;
+}
+
+/*Activités*/
+
+.activites__titre {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+    /* Conteneur pour les cartes */
+    .cards-container-activité {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    /* Cartes */
+    .card-activité {
+        width: 23%;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+    }
+
+    /* Image de la carte */
+    .card__header-activité img {
+        width: 100%; 
+        height: 388px; 
+        border-radius: 20px 20px 0 0; /* Rayon spécifié */
+    }
+
+    /* Titre de la carte */
+    .card__title-activité {
+        margin: 0;
+        padding: 15px 0 15px 10px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
 
 /*FOOTER*/
 
@@ -269,7 +456,15 @@ footer {
     padding-left: 45px;
 }
 
-/*DIV*/
+.titre {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.liste {
+    font-size: 16px;
+}
+
 .footerInfo {
     flex: 1;
 }
